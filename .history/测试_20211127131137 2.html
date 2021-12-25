@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+// 第二种方式：
+let arr1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+let arr2 = [];
+
+for (let i = 0; i < arr1.length; i++) {
+  if (arr1[i] > 10) {
+    arr2[arr2.length] = arr1[i];  
+    // 将数组 arr1 中获取到大于10的元素，赋值给新数组 arr2，arr2.length 初始值为0，用来表示新数组 arr2 的索引号
+}
+
+console.log(arr2);  // 输出：[77,52,25]
+
+
+  </script>
+</body>
+</html>

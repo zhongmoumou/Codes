@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+
+
+// ## 10、函数综合练习：用户输入一个数判断是否是素数，并返弹出回值（又叫质数，只能被 1 和自身整除的数）。
+function getPrime(num) {
+  for (let i = 2; i < num; i++) {  // 利用 for 循环和取余运算，能被除了1和本身除的数，就不是质数
+    if (num % i == 0) {
+      return num + '不是质数';
+    }
+  }
+  return num + '是质数';  // 通过上面 for 循环筛选后的数，就是质数
+}
+
+alert(getPrime(29));
+
+  </script>
+</body>
+</html>

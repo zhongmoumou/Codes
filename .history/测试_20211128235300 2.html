@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+// 输入一个年份，判断是否是闰年（闰年：能被 4 整除并且不能被 100 整数，或者能被 400 整除）
+
+// let year = prompt('请输入一个任意年份');
+
+// if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+//   alert(year + '年是闰年');
+// } else {
+//   alert(year + '年是平年');
+// }
+
+
+
+function leap(year) {
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+  alert(year + '年是闰年');
+} 
+  return year;
+}
+
+leap(leap(2003));
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

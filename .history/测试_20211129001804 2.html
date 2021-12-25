@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+function monthDays() {
+	let year = prompt('请输入一个年份（数字）：');
+	
+  leap();
+  }
+}
+
+function leap(year) {  // leap 是闰年的英文写法
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+  alert(year + '年 是闰年');
+} else {
+  alert(year + '年 是平年');
+}
+}
+
+monthDays(); 
+
+
+
+  </script>
+</body>
+</html>

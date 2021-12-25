@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+var num = 10;
+
+console.log(num + ' hello');  // 输出：10 hello。因为 num 是全局作用域的变量
+
+function fn() {
+	var num = 'nihao';
+	console.log(num);  
+}
+
+fn();  // 输出：nihao。因为函数内的 num 是局部作用域的变量，只能在函数内部使用
+
+  </script>
+</body>
+</html>

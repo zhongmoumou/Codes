@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+// let arr = [2, 6, 1, 77, 52, 25, 7];
+
+function getMax(arr) {  // 形参：接受一个数组
+  let max = arr[0];    // 设定最大值 max，值为数组中的第一个元素
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {    // 让数组中的每一个元素（除了第一个）都和 max 比较
+      max = arr[i];    // 如果这个元素大于 max，就把这个值赋值给 max，然后继续比较、继续赋值，直到全部比较结束
+    }
+  }
+
+  return max;
+}
+
+alert(getMax([5, 2, 99, 101, 67, 77]));  // 实参：输入一个数组
+/* 
+	上面的代码可以写为：
+
+	let arrMax = getMax([5, 2, 99, 101, 67, 77]);
+	alert(arrMax);
+*/
+
+
+  </script>
+</body>
+</html>

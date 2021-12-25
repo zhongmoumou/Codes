@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+function f1() {
+	var num = 123;
+	
+	function f2() {
+		console.log(num);
+	}
+
+	f2;
+}
+
+var num = 456;
+
+f1();  // 输出：123。执行函数后，根据内部函数可以访问外部函数的变量这种机制，采用链式查找可以在外部函数中找到变量 num = 123
+
+  </script>
+</body>
+</html>
