@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .li {
+      
+    }
+
+    .tab_list {
+      float: left;
+      height: 39px;
+      line-height: 39px;
+      padding: 0 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .tab_list .current {
+      background-color: #c81623;
+      color: #fff;
+    }
+
+    .item_info {
+      padding: 20px 0 0 20px;
+    }
+
+    .item {
+      display: none;
+    }
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <div class="tab"> 
+    <div class="tab_list">
+      <ul>
+        <li class="current">商品介绍</li>
+        <li>规格与包装</li>
+        <li>售后保障</li>
+        <li>商品评价（9999+）</li>
+        <li>手机社区</li>
+      </ul>
+    </div>
+    <div class="tab_con">
+      <div class="item" style="display: block;">
+        商品介绍模块内容
+      </div>
+      <div class="item">
+        规格与包装模块内容
+      </div>
+      <div class="item">
+        售后保障模块内容
+      </div>
+      <div class="item">
+        商品评价（9999+）内容
+      </div>
+      <div class="item">
+        手机社区内容
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // 1、获取事件源
+    let lis = document.querySelector('.tab_list').querySelectorAll('li');
+    let items = document.querySelectorAll('.item');
+
+    // 2、注册事件，添加事件处理程序：利用排他思想实现
+    for (let i = 0; i < lis.length; i++) {
+      // 给五个 li 设置索引号，从 0 开始
+      lis[i].setAttribute('index', i);  // 因为这里是 for 循环遍历，i 从 0 开始遍历到 4，所以直接写 i 即可
+
+      // （1）上面的选项卡：
+      lis[i].onclick = function() {
+        for (let i = 0; i < lis.length; i++) {
+          lis[i].className = '';
+        }
+        this.className = 'current';  // this 代表 lis[i]
+
+        // （2）下面的选项卡：
+        let index = this.getAttribute('index');  // this 代表 lis[i]
+        for(let i = 0; i < items.length; i++) {
+          items[i].style.display = '';
+        }
+        items[i].style.display = 'block';
+      }
+
+      
+
+    }
+
+
+  </script>
+</body>
+
+
+</html>

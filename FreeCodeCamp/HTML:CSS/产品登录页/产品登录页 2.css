@@ -1,0 +1,167 @@
+/* || 整体网页设计 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 整体网页设置内外边距为0，主要是想让footer栏和网页底部无间距 */
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+
+/* || header布局 */
+#header {
+    display: flex;
+    /* 设置flex布局 */
+}
+
+#header-img {
+    flex: 1;
+    /* 左边的logo占四分之一 */
+    margin: 20px 0 0 20px;
+}
+
+#nav-bar {
+    flex: 3;
+    /* 右边的导航栏占四分之三 */
+    text-align: right;
+    /* 让导航栏靠右显示 */
+}
+
+.nav-link {
+    margin: 28px 40px 0 0;
+    display: inline-block;
+    /* 让导航栏横排显示 */
+    list-style: none;
+    /* 去除头部导航栏圆点序号 */
+}
+
+.nav-a  {
+    text-decoration: none;
+    /* 去除头部导航栏下划线 */
+    
+}
+
+
+/* || main布局 */
+main {
+    width: 900px;
+    min-width: 850px;
+    margin: 0 auto;
+    /* 文章主体内容宽度为850px，网页居中显示 */
+}
+
+/* || section-main1布局 */
+#section-main1 {
+    width: 500px;
+    margin: 40px auto 100px auto;
+    text-align: center;
+}
+
+#email {
+    width: 300px;
+    height: 30px;
+    margin: 10px 0 10px 0;
+}
+#submit {
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+    font-weight:bold;
+    border: 0;
+    background-color: #EAC645;
+}
+
+/* || section-main2布局 */
+.main2-introduction {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.main2-imgs {
+    flex: 1;
+}
+
+.main2-article {
+    flex: 5;
+}
+
+/* || section-main3布局 */
+#section-main3 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* || section-main4布局 */
+#section-main4 {
+    display: flex;
+}
+
+.main4-list {
+    flex: 1;
+    width: 250px;
+    height: 300px;
+    margin: 0 20px 0 0;
+    text-align: center;
+    border: 1px solid black;
+    list-style: none;
+    /* 去除尾部导航栏圆点序号 */
+
+}
+
+.main4-list-p {
+    padding: 10px 0;
+    background-color: #DDDDDD;
+}
+
+.main4-list-h2 {
+    margin: 10px 0 10px 0;
+}
+
+.main4-list-ul {
+    margin: 10px 0 30px 0;
+    list-style: none;
+    line-height: 1.8em;
+    /* 列表行间距增大 */
+}
+
+.main4-list-button {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    border: 0;
+    background-color: #EAC645;
+}
+
+/* || 尾部布局*/
+footer {
+    /* clear: both; */
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+    background-color: #DDDDDD;
+}
+
+#footer-ul {
+    text-align: right;
+    list-style: none;
+    /* 去除尾部导航栏圆点序号 */
+}
+
+.footer-li {
+    /* margin: 10px 20px 0 0; */
+    display: inline-block;
+    /* 尾部导航栏横排显示 */
+}
+
+.footer-a  {
+    text-decoration: none;
+    /* 去除下划线 */
+}
+
+#footer-p {
+    /* padding: 0 20px 20px 0; */
+    text-align: right;
+    /* margin-top: -10px; */
+}

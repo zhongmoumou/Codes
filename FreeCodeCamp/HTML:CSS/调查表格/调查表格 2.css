@@ -1,0 +1,125 @@
+body::before {
+    /* 以下代码的意思是设置一个背景图片（固定在整个屏幕上，不随滚动条滚动，且加上虚化的紫色颜色） */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* background: var(--color-darkblue); */
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+    background-size: cover;
+    /* 把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。 */
+    background-position: center;
+    /* 设置背景图像的起始位置 */
+
+    
+}
+
+header  {
+    text-align: center;
+    /* 头部标题和文字居中显示 */
+    color: white;
+}
+
+#title {
+    margin: 40px 0  20px 0;
+}
+
+#description {
+    margin-bottom: 20px;
+}
+
+#survey-form {
+    width: 580px;
+    margin: 0 auto;
+    padding: 40px 20px 20px 40px;
+    text-align: left;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    /* 设置背景颜色虚化 */
+    background-repeat: no-repeat;
+}
+
+.div-form {
+    margin: 0 0 30px 0;
+    /* 让每个选择框之间的外边距为30px */
+}
+
+#name {
+    width: 550px;
+    height: 30px;
+    margin: 10px 0 0px 0;
+    /* 让文字和选择框之间的外边距为10px */
+    border: 1px solid;
+    border-radius: 5px;
+    /* 让选择框四周圆角 */
+}
+
+#email {
+    width: 550px;
+    height: 30px;
+    margin: 10px 0 0px 0;
+    /* 让文字和选择框之间的外边距为10px */
+    border: 1px solid;
+    border-radius: 5px;
+    /* 让选择框四周圆角 */
+}
+
+#number {
+    width: 550px;
+    height: 30px;
+    margin: 10px 0 0px 0;
+    /* 让文字和选择框之间的外边距为10px */
+    border: 1px solid;
+    border-radius: 5px;
+    /* 让选择框四周圆角 */
+}
+
+#dropdown {
+    width: 550px;
+    height: 30px;
+    margin: 10px 0 0px 0; 
+    /* 让文字和选择框之间的外边距为10px */
+    border: 1px solid;
+    border-radius: 5px;
+    /* 让选择框四周圆角 */
+}
+
+#feature-select {
+    width: 550px;
+    height: 30px;
+    margin: 10px 0 0px 0; 
+    /* 让文字和选择框之间的外边距为10px */
+    border: 1px solid;
+    border-radius: 5px;
+    /* 让选择框四周圆角 */
+}
+
+#comments-textarea {
+    width: 550px;
+    height: 150px;
+    margin: 10px 0 0px 0; 
+    /* 让文字和选择框之间的外边距为10px */
+    border: 1px solid;
+}
+
+.improved-input {
+    margin: 10px 10px 0 0; 
+    /* 让文字和选择框之间的外边距为10px */
+}
+
+#submit {
+    width: 550px;
+    height: 40px;
+    font-size: 18px;
+    border: 0 solid;
+    color: white;
+    background-color: #5CAC6C; 
+}
+

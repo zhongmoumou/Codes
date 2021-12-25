@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <button id="one">变红色</button>
+  <button id="two">变绿色</button>
+  <p id="ps" style="color: black;">hello world</p>
+  <ol>
+    <li>hello</li>
+    <li>world</li>
+  </ol>
+
+  <script>
+    // 1、获取事件源
+    let btn1 = document.getElementById('one');
+    let btn2 = document.getElementById('two');
+    let p = document.getElementById('ps');
+
+    // 2、确定事件类型、完成事件处理程序
+    btn1.onclick = function() {
+      p.style = 'color: red;font-size: 40px';
+    }
+    btn2.onclick = function() {
+      p.style = 'color: green';
+    }
+  </script>
+</body>
+</html>

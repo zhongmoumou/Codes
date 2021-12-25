@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <ul>
+    <li>hello 1</li>
+    <li>hello 2</li>
+    <li>hello 3</li>
+    <li>hello 4</li>
+  </ul>
+  
+  <ol id="ol">
+    <li>world 1</li>
+    <li>world 2</li>
+    <li>world 3</li>
+    <li>world 4</li>
+  </ol>
+
+  <script>
+    // 1、获取整个页面所有 li 元素
+let lis = document.getElementsByTagName('li');
+
+console.log(lis);  // 输出：[li, li, li, li, li, li, li, li]，以伪数组的形式展示
+
+// 2、获取 ol 标签下的 li 元素
+// 先获取父类元素 ol 标签元素
+let olFu = document.getElementById('ol');
+
+let olZi = olFu.getElementByTagName('li');
+console.log(olsZi);  // 输出：[li, li, li, li]，以伪数组的形式展示
+  </script>
+</body>
+
+
+
+</html>

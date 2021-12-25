@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let timer1 = setInterval(function callback1() {
+            console.log('hello world1');  // 每隔1秒后打印 hello world1
+        }, 1000);
+
+        let timer2 = setInterval(function callback2() {
+            console.log('hello world2');  // 每隔3秒后打印 hello world2
+        }, 3000);
+
+				// clearInterval()
+        // clearInterval(timer1);  // 停止了名字为 timer1 的定时器，所以 hello world1 就不打印了
+    </script>
+</body>
+</html>

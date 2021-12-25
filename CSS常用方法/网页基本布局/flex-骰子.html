@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zwl‘s first task</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: center;
+            flex-wrap: wrap;
+            align-content: center;
+            font-family: 'Open Sans', sans-serif;
+  
+            background: linear-gradient(top, #222, #333);
+        }
+        
+        [class$="face"] {
+            margin: 16px;
+            padding: 4px;
+  
+            background-color: #e7e7e7;
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+  
+            box-shadow:
+                inset 0 5px white, 
+                inset 0 -5px #bbb,
+                inset 5px 0 #d7d7d7, 
+                inset -5px 0 #d7d7d7;
+  
+            border-radius: 10%;
+        }
+
+        .pip1 {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 4px;
+
+            background-color: #333;
+            box-shadow: inset 0 3px #111, inset 0 -3px #555;
+        }
+
+        .pip2 {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 4px;
+
+            background-color: #333;
+            box-shadow: inset 0 3px #111, inset 0 -3px #555;
+        }
+
+        .pip3 {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 4px;
+
+            background-color: #333;
+            box-shadow: inset 0 3px #111, inset 0 -3px #555;
+        }
+
+
+        .first-face {
+            display: flex;
+            /* 设置 flex 布局 */
+
+            /* justify-content: flex-start; */
+            /* 设置主轴从左到右时：起点对齐 */
+
+            /* justify-content: flex-end; */
+            /* 设置主轴从左到右时：终点对齐 */
+
+            justify-content: center;
+            /* 设置主轴从左到右时：居中对齐 */
+
+            /* align-items: flex-start; */
+            /* 设置交叉轴从上到下时：起点对齐 */
+
+            /* align-items: flex-end; */
+            /* 设置交叉轴从上到下时：终点对齐 */
+
+            align-items: center;
+            /* 设置交叉轴从上到下时：居中对齐 */
+        }
+
+        .second-face {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .second-face .pip2:nth-of-type(2) {
+            align-self: flex-end;
+        }
+    
+        .third-face {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .third-face .pip2:nth-of-type(2) {
+            align-self: center;
+        }
+
+        .third-face .pip2:nth-of-type(3) {
+            align-self: flex-end;
+        }
+
+        .forth-face {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .forth-face .num {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sixth1-face {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sixth1-face .num {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sixth2-face {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sixth2-face .num{
+            display:flex;
+            justify-content: space-between;
+        }
+
+        .sixth2-face .num:nth-child(2){
+            align-self: center;
+        }
+        
+        .sixth3-face {
+            display: flex;
+            
+            justify-content: space-between;
+        }
+
+        .sixth3-face .num{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sixth3-face .num:nth-child(2){
+            /* align-self: center; */
+            justify-content: center;
+        }   
+
+    </style>
+</head>
+<body>
+    <div class="first-face">
+        <span class="pip3"></span>
+    </div>
+
+    <div class="second-face">
+        <span class="pip2"></span>
+        <span class="pip2"></span>
+    </div>
+
+    <div class="third-face">
+        <span class="pip2"></span>
+        <span class="pip2"></span>
+        <span class="pip2"></span>
+    </div>
+
+    <div class="forth-face">
+        <div class="num">
+            <span class="pip2"></span>
+            <span class="pip2"></span>
+        </div>
+
+        <div class="num">
+            <span class="pip2"></span>
+            <span class="pip2"></span>
+        </div>
+    </div>
+
+    <div class="sixth1-face">
+        <div class="num">
+            <span class="pip1"></span>
+            <span class="pip1"></span>
+            <span class="pip1"></span>
+        </div>
+
+        <div class="num">
+            <span class="pip2"></span>
+            <span class="pip2"></span>
+            <span class="pip2"></span>
+        </div>
+    </div>
+
+    <div class="sixth2-face">
+        <div class="num">
+          <span class="pip1"></span>
+          <span class="pip1"></span>
+          <span class="pip1"></span>
+          
+        </div>
+
+        <div class="num">
+          <span class="pip2"></span>
+        </div>
+        
+        <div class="num">
+            <span class="pip3"></span>
+            <span class="pip3"></span>
+        </div>
+      </div>
+
+      <div class="sixth3-face">
+        <div class="num">
+          <span class="pip1"></span>
+          <span class="pip1"></span>
+          <span class="pip1"></span>
+          
+        </div>
+
+        <div class="num">
+          <span class="pip2"></span>
+        </div>
+        
+        <div class="num">
+            <span class="pip3"></span>
+            <span class="pip3"></span>
+        </div>
+      </div>
+</html>

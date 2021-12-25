@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <button id="one">变红色</button>
+  <button id="two">变绿色</button>
+  <p id="ps" style="color: black;">hello world</p>
+
+  <script>
+    // 1、获取事件源
+    // 把变红色按钮操作赋予给 btn1
+    let btn1 = document.getElementById('one');
+    // 把变绿色按钮操作赋予给 btn2
+    let btn2 = document.getElementById('two');
+    // 把需要被操作的p标签操作赋予给 p
+    let p = document.querySelector('#ps');
+
+    // 2、确定事件类型、完成事件处理程序
+    btn1.onclick = function() {
+      // 通过点击按钮“变红色”，完成相应的操作
+      p.style.color = 'red';
+    }
+    btn2.onclick = function() {
+      // 通过点击按钮“变红色”，完成相应的操作
+      p.style = 'color: green;font-size: 40px';
+    }
+  </script>
+</body>
+</html>

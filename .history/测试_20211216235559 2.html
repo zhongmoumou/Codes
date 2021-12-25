@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setInterval() 调用函数有三种形式：直接写函数、写函数名、'函数名()'。第三种不推荐使用
+        // 1.1 直接写函数
+        setInterval(function() {
+            console.log('hello world1');  // 每隔2秒后打印 hello world1
+        }, 2000);
+        
+        // 1.2 写函数名
+        setInterval(hello, 3000);
+        function hello() {
+            console.log('hello world2');  // 每隔3秒后打印 hello world2
+        }
+
+        // 1.3 '函数名()
+        // setInterval('hello()', 4000);   // 不提倡这个写法
+
+        // 2. 如果有很多定时器，可以给定时器赋值一个标识符（命名）
+        let timer1 = setInterval(callback1, 5000);
+        let timer2 = setInterval(callback2, 6000);
+
+        function callback1() {
+            console.log('hello world3');  // 每隔5秒后打印 hello world3
+        }
+
+        function callback2() {
+            console.log('hello world4');  // 每隔6秒后打印 hello world4
+        }
+
+				// clearTimeout()
+        // 里面的参数是定时器的标识符，即 ID 就是定时器的名字。
+        clearTimeout(timer1);  // 停止了名字为 timer1 的定时器，所以 hello world3 就不打印了
+    </script>
+</body>
+</html>

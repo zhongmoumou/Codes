@@ -1,0 +1,75 @@
+html,
+body {
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  /* 固定定位，使得左侧导航栏固定显示在网页的最左侧 */
+  width: 300px;
+  height: 100%;
+  border-right: 3px solid;
+  /* 设置左侧导航栏最右侧边框大小为3px */
+  border-color: #9ba2a2;
+  /* 设置左侧导航栏最右侧边框颜色为灰色 */
+}
+
+nav header {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+#main-doc header {
+    font-size: 1.8em;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  /* 去除列表前面的序号 */
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: black;
+  text-decoration: none;
+  /* 去除列表链接的下划线 */
+  cursor: pointer;
+  /* 鼠标移动到列表链接上的时候指针变为一个小手 */
+}
+
+#main-doc {
+  /* position: absolute; */
+  margin-left: 320px;
+  padding: 20px;
+}
+
+section article {
+  color: black;
+  margin-left: 15px;
+  font-size: 1em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+}

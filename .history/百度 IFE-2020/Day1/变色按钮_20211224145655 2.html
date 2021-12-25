@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+        }
+        .container {
+            width: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: thistle;
+            /* 在网页上下左右居中 */
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 0px;
+            background-color: teal;
+        }
+
+        #button1 {
+            font-size: 20px;
+            padding: 5px 20px;
+            color: white;
+            border: 0 solid red;
+            background-color: red;
+        }
+
+        #button2 {
+            float: right;
+            font-size: 20px;
+            padding: 5px 20px;
+            color: white;
+            border: 0 solid black;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="changeColor">Hello World</h1>
+
+        <div class="top">
+            <button id="button1" type="button" onclick="redColor()">红色</button>
+        <!-- 创建一个按钮，添加一个名为 "redColor" 的点击效果(onlick) -->
+
+            <button id="button2" type="button" onclick="blackColor()">复原</button>
+        <!-- 创建一个按钮，添加一个名为 "blackColor()" 的点击效果(onlick) -->
+        </div>
+    </div>
+    
+    <script>
+        // 1. 获取事件
+        let h1 = document.querySelector('#changeColor');
+        let btn1 = document.querySelector('#button1');
+        let btn2 = document.querySelector('#button2');
+
+        // 2. 注册事件、设置事件处理程序
+        btn1.addEventListener('click', function() {
+            h1.style.color = 'red';
+        });
+        btn2.addEventListener('click', function() {
+            h1.style.color = 'black';
+        });
+
+        function redColor() {
+            var colorRed = document.getElementById("changeColor").style.color = 'red';
+            // 上面代码的意思是通过 redColor 函数，把 id为“changeColor” 的 h1 标签颜色变红
+        }
+
+        function blackColor() {
+            var colorBlack = document.getElementById("changeColor").style.color = 'black';
+            // 上面代码的意思是通过 blackColor 函数，把 id为“changeColor” 的 h1 标签颜色变黑
+        }
+    </script>
+</body>
+</html>

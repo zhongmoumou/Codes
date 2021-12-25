@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点击获取当前日期、星期</button>
+    
+    <p id="dates">今天的日期：</p>
+    <p id="times">今天的日期：</p>
+  
+    <script>
+        // 1. 点击 btn 标签，获得当前的日期、星期
+            // 1.1 获取事件源：
+            let btn = document.querySelector('#btn');
+            let dates = document.querySelector('#dates')
+            let times = document.querySelector('#times');
+    
+            // 1.2 确定事件类型、完成事件处理程序：
+            btn.onclick = function() {
+                dates.innerText = getDate();
+            }
+    
+            // 1.3 不点击，直接让 h3 标签显示当前日期
+            times.innerText = getDate();
+        
+        
+        // 2. 该函数的作用是：返回当前日期（年/月/日/星期）
+        function getDate() {
+            let date = new Date();  // 获取当前中国标准时间
+
+            let year = date.getFullYear();  // 获取当前的年份
+            let month = date.getMonth() + 1;  // 获取当前的月份（加1是因为该方法从0-11，所以真实月份应该加1）
+            let dates = date.getDate();  // 获取当天日期
+
+            let week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            let day = date.getDay();  // 获取星期几（周日0 到 周六6），配合上面的 week 就可以获得今日的星期（week[day]）
+
+            return '今天的日期：' + year + '年' + month + '月' + dates + '日 ' + week[day]
+        }
+    </script>
+  </body>
+</html>

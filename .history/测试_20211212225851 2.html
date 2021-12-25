@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+  </ul>
+
+  <script>
+      // 1、获取元素
+      let ul = document.querySelector('ul');
+      let li = document.querySelector('li');
+
+
+      // 2、复制 ul 第一个子节点
+      let lili = li[0].cloneNode(true);
+
+      // 3、把刚刚复制的子节点添加到 ul 的最后面
+      ul.appendChild(lili);
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,50 @@
+html {
+  background-color: #00539F;
+  /* 整个网页的背景颜色为蓝色 */
+}
+
+body {
+  width: 650px;
+  /* body的宽度为固定宽度650像素 */
+  margin: 0 auto;
+  /* body在网页中左右居中显示，且上下外边距为0 */
+  background-color: #FF9500;
+  /* body的背景颜色是橘黄色 */
+  padding: 20px 20px 20px 20px;
+  /* body内容的上下左右内边距均为20像素 */
+  border: 5px solid black;
+  /* body边框为5像素的黑边框 */
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;    
+  font-size: 60px;
+  text-align: center;
+  /* 标题居中显示 */
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+  /* 给标题设置一个阴影 */
+}
+
+button {
+  display: block;
+  margin: 0 auto 10px auto;
+  /* 先把button变成块级元素，然后就可以使用margin左右居中对齐了 */
+  
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+}
+
+p, li {
+  font-size: 16px;    
+  line-height: 2;
+  /* line-height 行间距后而可以跟不同的参数，如果是数字，就是当前字体大小乘上数字 */
+  letter-spacing: 1px;
+  /* 文字之间的距离为1像素 */
+}

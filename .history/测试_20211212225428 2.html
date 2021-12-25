@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <button>删除</button>
+  <ul>
+      <li>熊大</li>
+      <li>熊二</li>
+      <li>光头强</li>
+  </ul>
+
+  <script>
+      // 1、获取元素
+      let ul = document.querySelector('ul');
+      var btn = document.querySelector('button');
+      // 2、注册事件，添加处理程序
+      // 点击删除按钮，依次删除 ul 的子节点
+      btn.onclick = function() {
+        // 如果 ul 的子节点的长度为 0，则停止删除并把按钮禁用
+        if (ul.children.length == 0) {
+            this.disabled = true;
+        } else {
+          // 如果 ul 的子节点的长度不为 0，则继续删除
+          ul.removeChild(ul.children[0]);
+        }
+      }
+  </script>
+</body>
+
+
+</html>

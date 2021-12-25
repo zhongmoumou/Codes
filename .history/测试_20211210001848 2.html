@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 800px;
+      margin: 100px auto;
+      text-align: center;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead {
+      height: 30px;
+      background-color: skyblue;
+    }
+
+    tbody tr {
+      height: 30px;
+    }  
+
+    tbody td {
+      border-bottom: 1px solid #d7d7d7;
+      font-size: 12px;
+      color: blue;
+    }
+
+    .bg {
+      background-color: pink;
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" id="j_caAll">
+          </th>
+          <th>商品</th>
+          <th>价钱</th>
+        </tr>
+      </thead>
+      <tbody id="j_tb">
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>iphone13</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>iphone13</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>iphone13</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>iphone13 mini</td>
+          <td>5199</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>iphone13</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>iphone13</td>
+          <td>6000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <script>
+    // 1、获取事件源
+    let trs = document.querySelector('tbody').querySelectorAll('tr');
+
+    // 2、注册事件，添加事件处理程序：利用 for 循环
+    for (var i = 0; i < trs.length; i++) {
+      // 鼠标经过事件：onmouseover
+      trs[i].onmouseover = function() {
+        // 当鼠标经过的时候给 tr 标签添加一个 bg 类，设置好背景颜色，这样鼠标经过的时候就可以改变这一行的背景颜色了
+        this.className = 'bg';
+      }
+      // 鼠标离开事件：onmouseout
+      trs[i].onmouseout = function() {
+        // 当鼠标离开的时候给 tr 标签添加一个 空 类，这样鼠标经过的时候就这一行就没有背景颜色了
+        this.className = '';
+      }
+    }
+  </script>
+</body>
+
+
+</html>

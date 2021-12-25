@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. keydown 某个键盘按键被按下时触发
+        document.addEventListener('keydown', function(e) {
+            console.log(111);
+        });
+
+        // 2. keypress 某个键盘按键被按下时触发（但是它不识别功能键，比如 ctrl、shift等）
+        document.addEventListener('keypress', function(e) {
+            console.log(222);
+        });
+
+        // 3. keyup 某个键盘按键被松开时触发
+        document.addEventListener('keyup', function(e) {
+            console.log(333);
+        });
+    </script>
+</body>
+</html>

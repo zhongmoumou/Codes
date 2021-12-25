@@ -1,0 +1,167 @@
+/* || 整体设计 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    background-color: #28282A;
+}
+
+
+/* || header布局 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 把导航栏固定在屏幕定侧 */
+    width: 100%;
+    height: 70px;
+    background-color: #af3e47;
+}
+
+nav {
+    text-align: right;
+}
+
+nav li {
+    font-size: 25px;
+    display: inline-block;
+    /* 让导航栏横排显示 */
+    margin: 15px 20px 
+    /* 让导航栏 */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    /* 去除导航栏下划线 */
+}
+
+
+/* || main布局 */
+#section-first {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 使用flex布局，设置主轴为垂直方向，起点在上方，从而让标题和文字在页面居中显示 */
+}
+
+#section-first 
+h1 {
+    font-size: 80px;
+    margin-bottom: -10px;
+}
+
+#section-first 
+p {
+    font-size: 40px;
+    font-style: italic;
+    color: #AF3D47;
+}
+
+
+#section-second {
+    text-align: center;
+    background-color: #48567A;
+}
+
+section 
+h2{
+    margin: 0 auto 30px auto;
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+#section-second
+div {
+    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 350px;
+    margin: 0 auto;
+}
+
+#section-second
+a {
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+#section-second 
+img {
+    width: 350px;
+    height: 400px;
+}
+
+#section-second
+p {
+    margin: -5px 0 60px 0;
+    padding-top: 15px;
+    height: 60px;
+    font-size: 25px;
+    color: white;
+    background-color: #323840;
+}
+
+#aaa {
+    width: 50px;
+    height: 20px;
+}
+
+
+#section-third {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 使用flex布局，设置主轴为垂直方向，起点在上方，从而让标题和文字在页面居中显示 */
+    border-bottom: 3px solid #AF3D47;
+}
+
+#section-third
+h2 {
+    
+    font-size: 60px;
+}
+
+#section-third
+p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#section-third
+a {
+    margin: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* || footer布局 */
+footer {
+    height: 20vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+footer
+p {
+    margin: 20px;
+}
+
+footer
+a {
+    text-decoration: none;
+    color: white;
+}

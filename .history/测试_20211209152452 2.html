@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border: 1px solid #ccc;
+      margin: 100px auto;
+      font-size: 20px;
+      text-align: center;
+      color: #f40;
+    }
+
+    .box img {
+      width: 60px;
+      margin-top: 5px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: -1px;
+      left: -27px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      line-height: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <input type="text" value="请输入需要搜索的内容：">
+
+  <script>
+    // 1、获取事件源
+    let input = document.querySelector('input');
+
+    // 2、注册事件、添加事件处理程序1（获得鼠标焦点触发）
+    input.onfocus = function() {
+      if (input.value == '请输入需要搜索的内容：') {
+        input.value == '';
+      }
+    }
+
+    // 3、注册事件、添加事件处理程序1（失去鼠标焦点触发）
+    input.onfocus = function() {
+      if (input.value == '请输入需要搜索的内容：') {
+        input.value == '';
+      }
+    }
+
+  </script>
+</body>
+
+
+</html>
