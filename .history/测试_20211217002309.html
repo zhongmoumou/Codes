@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">0</span>
+        <span class="minute">0</span>
+        <span class="second">0</span>
+    </div>
+
+    <script>
+        // 1. 获取 HTML 的元素
+        let hour = document.querySelector('.hour');
+        let minute = document.querySelector('.minute');
+        let second = document.querySelector('.second');
+
+        // 2. 输入倒计时截止的时间（我的生日）
+        let inputTime = +new Date('2022/01/06 00:00');  // 这里表示用户输入的实际的时间戳（总毫秒数）
+        // 2.1 先调用一次定时器，防止刷新页面出现空白的问题。
+        countDown();  
+
+        // 3. 开启倒计时定时器 setInterval()
+        setInterval(countDown, 1000);  
+
+        // 下面函数封装的是获取倒计时效果
+        function countDown() {  // countDown 表示倒计时的意思
+            let nowTime = +new Date();  // 这里表示出当前时间的时间戳（总毫秒数）
+            let times = (inputTime - nowTime) / 1000;  // 这里计算出剩余时间的秒数 = 总毫秒数 / 1000
+
+            let h = parseInt(times / 60 / 60 % 24);  // 计算小时
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h;
+
+            let m = parseInt(times / 60 % 60);  // 计算分数
+            m = m < 10 ? '0' + m : m;
+            m.innerHTML = m;
+            
+            let s = parseInt(times % 60);  // 计算秒数
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+    </ul>
+
+    <script>
+        // 2、通过事件委托的方式：
+        // 事件委托的核心原理：给父节点添加侦听器， 利用事件冒泡影响每一个子节点
+        let ul = document.querySelector('ul');
+
+        ul.addEventListener('click', function(e) {
+            // 通过 e.target 可以分别得到我们点击的对象
+            // 实际效果是，点击哪个 li 就让那个 li 的字体颜色颜色变成红色
+            e.target.style.color = 'red';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    /* 让信件内容居中显示 */
+    font-size: 18px;
+}
+
+.head, .time {
+    text-align: right;
+    /* 让信件开头居右显示 */
+}
+
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 22px;
+}

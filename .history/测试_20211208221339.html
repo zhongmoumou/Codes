@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      position: relative;
+      width: 500px;
+      border-bottom: 1px solid #ccc;
+      margin: 200px auto;
+    }
+
+    #box input {
+      width: 370px;
+      height: 30px;
+      border: 0;
+      outline: none;  /*  去除点击密码框时四周出现的蓝色框框 */
+    }
+
+    #box span {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 70px;
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <div id="box">
+    <label for="">
+      <span id="span">查看密码</span>
+    </label>
+    <input id="pass" type="password">
+  </div>
+
+  <script>
+    // 1、获取事件源
+    let span = document.getElementById('span');
+    let pass = document.getElementById('pass');
+
+    // 2、确定事件类型、完成事件处理程序
+    let flag = 0;
+
+    span.onclick = function() {
+      if (flag === 0) {
+        pass.type = 'text';
+        flag = 1;
+      } else {
+        pass.type = 'password'
+      }
+    }
+  </script>
+</body>
+</html>

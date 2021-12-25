@@ -1,0 +1,1 @@
+console.log(Math.max(Math.PI));  // 输出：

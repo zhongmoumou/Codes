@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+/* 主体操作： */
+#main {
+    margin: 30px 10px;
+    padding: 15px;
+    background-color: #EEEEEE;
+}
+
+/* 标题操作： */
+#title {
+    margin: 40px 0 10px 0 ;
+    font-size: 40px;
+}
+#title, p {
+    text-align: center;
+}
+
+/* 图文操作： */
+#img-div {
+    padding: 20px 10px;
+    background-color: white;
+}
+#image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+#img-caption {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/*  */
+#tribute-info {
+    width: 600px;
+    margin: 0 auto;
+    /* 让下面文字内容居中显示 */
+}
+
+#tribute-info h3 {
+    margin: 50px 0 0 0;
+    /* 让标题与上面图片间距50px */
+}
+
+ul {
+    text-align: left;
+    line-height: 1.5em;
+}
+
+ul li {
+    margin: 15px 0;
+    /* 让无序列表之间的间距变成15px */
+}
+
+blockquote {
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+}

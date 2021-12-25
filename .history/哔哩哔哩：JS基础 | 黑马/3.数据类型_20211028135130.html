@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.为什么需要数据类型:
+            在计算机中,不同的数据所需占用的存储空司是不同的,为了便于把数据分成所需内存大小不同的数据,
+            充分利用存储空间,于是定义了不同的数据类型。
+            
+        2.变量数据类型:
+            变量的数据类型是由 JS 引擎根据 = 右边变量值的数据类型来判断的,运行完毕之后,变量就确定了数据类型。
+            JS 拥有动态类型,同时也意味着相同的变量可用作不同的类型。
+
+        3.数据类型分类:
+            (1)简单数据类型:
+                A、Number: 数字型,包含整型值和浮点型值,如21、0.21。  默认值: 0
+                    a、数字型进制: 
+                        二进制、八进制（数字前面加0）、十进制、十六进制（数字前面加0x）
+                    b、最大值: 
+                        Number.Max_VALUE ;最小值: Number.MIN_VALUE
+                    c、特殊值: 
+                        Infinity: 无穷大,大于任何数值; -Infinity: 无穷小,小于任何数值; 
+                        NaN: not a number,代表非数值
+                    d、isNaN(): 
+                        这个方法用来判断非数字并且返回一个值,如果括号里面是数字返回的是false,
+                        如果不是数字返回的是true。
+
+                B、Boolean: 布尔值类型,如true、false,等价于 1 和 0。  默认值: false
+
+                C、String: 字符串类型,如"张三”。  默认值: ""
+                    a、字符串引号嵌套: 
+                        JS 可以用单引号嵌套双引号,或者用双引号嵌套单引号(外双内单,外单内双)
+                    b、字符串转义符: 
+                        类似HTML里面的特殊字符,称之为转义符，转义符都是\开头的;
+                        例如: \n:换行  \\:反斜杠  \':单引号  \":双引号  \t:tab 缩进  \b:空格
+                    c、字符串长度:
+                        字符串是由若干字符组或的,这些字符的数量就是字符申的长度;
+                        通过字符串的 str.length 属性可以获取整个字符串的长度。
+                    d、字符串拼接:
+                        多个字符串之间可以使用 + 进行拼接,其拼接方式为 字符串 + 任何类型 = 新字符串;
+                        拼接前会把与字符串相加的任何类型转成字符串,再拼接成一个新的字符串.
+                        如: alert('hello' + 'world')  输出: hello world
+
+                D、undefined: let a; 声明了变量a,但是没有给值,此时 a = undefined。  默认值: undefined 
+
+                E、Null: let a = nul;声明了变量a为空值。  默认值: null
+
+            （2）复杂数据类型
+
+        4.获取变量数据类型:
+            (1)获取检测变量的数据类型: typeof
+                let age = 18;
+                alert(typeof age);  输出: Number(数字型)
+                
+                let name = 'hello';
+                alert(typeof name);  输出: String(字符串型)
+
+            (2)字面量: 字面量是在源代码中一个固定值的表示法,通俗来说,就是字面量表示如何表达这个值。
+                如: 数字字面量: 8,9,10; 
+                    字符串字面量:'黑马程序员,"大前端”; 
+                    布尔字面量:true, false
+
+        5.数据类型转换:
+            (1)什么是数据类型转换: 
+            使用表单、prompt 获取过来的数据默认是字符串类型的,此时就不能直接简单的进行加加法运算,
+            而需要转换变量的数据类型。通俗来说,就是把一种数据类型的变量转换成另外一种数据类型。
+
+            (2)转换为字符串型:
+                A、toString(): 转换成字符串。  
+                    let age = 25; alert( age.toString() );
+
+                B、String(): 转换为字符串。  
+                    let year = 2022; alert( String(year) );
+                    
+             ***C、JS 隐式转换，加号拼接字符串: 和字符串拼接的结果都是字符串。  
+                    let month = 10; alert( month + '月' );
+
+            (3)转换为数字型:
+                A、parseInt(): 转换为整数数值型。  
+                    let age = prompt('请输入你的年龄：');
+                    console.log( parseInt(age) );
+
+                B、parseFloat(): 转换为浮点数数值型(保留小数)。  
+                    let age = prompt('请输入你的年龄：');
+                    console.log( parseFloat(age) );
+
+                C、Number(): 转换为数值型。  
+                    let age = prompt('请输入你的年龄：');
+                    console.log( Number(age) );
+
+                D、JS 隐式转换，算术运算(- * /): 利用算数运算隐式转换为数值型。  
+                    console.log( '123' - 100 );
+
+            (4)转换为布尔型:
+
+     -->
+</body>
+</html>

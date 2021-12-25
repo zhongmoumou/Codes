@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .change {
+      
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <button>切换</button>
+  <p>百度</p>
+
+  <script>
+    // 1、获取事件源
+    let btn = document.querySelector('button');
+    let a = document.querySelector('p');
+
+    // 2、注册事件，添加事件处理程序
+    btn.onclick = function() {
+      p.className = 'change';
+    }
+  </script>
+</body>
+
+
+</html>

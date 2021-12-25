@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <p id="ps">上午好</p>
+  <img id="imgs" src="" alt="上午好">
+  <script>
+    // 1、获取事件源
+    let p = document.querySelector('#ps');
+    let img = document.querySelector('#imgs');
+
+    // 2、确定事件类型、完成事件处理程序
+    let now = new Date();
+    let hour = date.getHours();
+
+    if (hour < 12) {
+      p.innerText = '上午好啊！';
+    } else (hour >= 12 || hour < 18) {
+      p.innerText = '下午好啊！';
+    }
+  </script>
+</body>
+</html>

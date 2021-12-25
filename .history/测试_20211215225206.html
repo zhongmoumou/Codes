@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="测试.js"></script>
+</head>
+<body>
+    <input type="text" name="" id="">
+
+    <script>
+        let div = document.querySelector('div');
+
+        div.addEventListener('click', function(e) {
+            // e.target 显示的是触发事件 li 的对象：<li>...<li>
+            console.log(e.target);
+
+            // this 显示的是绑定事件 div 的对象：<div>...<div>
+            console.log(this);
+        })
+    </script>
+</body>
+</html>

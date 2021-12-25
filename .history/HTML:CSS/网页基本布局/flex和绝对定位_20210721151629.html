@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 200px;
+        width: 600px;
+        border: 1px solid #0000FF;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 使用 flex 布局，让 .box 里面的内容实现上下左右居中 */
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 绝对定位配合 transform 可以实现网页上下左右居中 */
+    }
+
+    .item{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        /* 设置文字左右居中 */
+        line-height: 50px;
+        /* 设置 line-height 大小跟 div 高度一样就可以实现文字上下居中 */
+        border: 1px solid #00C1B3;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

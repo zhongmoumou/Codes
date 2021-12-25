@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+function getMin() {
+	let min = arguments[0];
+	
+	for (let i = 0; i < arguments.length; i++) {
+		if (arguments[i] < arguments[0]) {
+			min = arguments[i]
+		}
+	}
+
+	return min;
+}
+
+let arrMin = getMin(112, 21, 63, 244, 54);
+
+console.log(arrMin);
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

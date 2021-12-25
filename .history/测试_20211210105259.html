@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 400px;
+      margin: 100px auto;
+      text-align: center;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead {
+      height: 30px;
+      background-color: skyblue;
+    }
+
+    tbody tr {
+      height: 30px;
+    }  
+
+    tbody td {
+      border-bottom: 1px solid #d7d7d7;
+      font-size: 12px;
+      color: blue;
+    }
+
+    .bg {
+      background-color: pink;
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+	<div id="demo" index="1"></div>
+
+	<script>
+		let div = document.querySelector('div');
+
+		// 1、获取内置属性值：element.属性
+		console.log(div.id);  // 输出元素内置属性 id 的值：demo
+
+		// 2、获取自定义属性值：element.getAttribute('属性')
+		console.log(div.getAttribute('index'));  // 输出自定义属性 index 的值：1
+		console.log(div.getAttribute('id'));  // 它也可以获取元素内置的属性 id 值：demo
+
+
+    // div.removeAttribute('id');
+	</script>
+</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         - 键盘事件对象中的 keyCode 属性可以得到相应按键的 ASCII 码值；
+// - onkeyup 和 onkeydown 事件不区分字母大小写；
+// - keypress 事件区分字母大小写吗，返回不同的 ASCII 值；
+        document.addEventListener('keyup', function(e) {
+            // console.log(e);
+            console.log('键盘按键被松开时触发:' + e.keyCode);
+        })
+
+        document.addEventListener('keydown', function(e) {
+            // console.log(e);
+            console.log('键盘按键被按住时触发:' + e.keyCode);
+        })
+
+        document.addEventListener('keypress', function(e) {
+            // console.log(e);
+            console.log('键盘按键被按住时触发:' + e.keyCode);
+        })
+    </script>
+</body>
+</html>

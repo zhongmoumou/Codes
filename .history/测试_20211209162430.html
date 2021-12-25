@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <a href="http://www.baidu.com">百度</a>
+  <img src="" alt="图片1">
+
+  <script>
+    // 1、获取事件源
+    let inputs = document.querySelector('input');
+
+    // 2、注册事件、添加事件处理程序1（获得鼠标焦点触发）
+    inputs.onfocus = function() {
+      if (inputs.value == '请输入') {
+        // 点击输入框，默认的文字存在时，点击后默认的文字消失
+        this.value = '';  //  这里的 this 代表 inputs
+      }
+      // 此时在输入框输入的文字变成黑色
+      this.style.color = 'black';
+    }
+
+    // 3、注册事件、添加事件处理程序1（失去鼠标焦点触发）
+    inputs.onblur = function() {
+      if (inputs.value == '') {
+        // 然后点击输入框外的地方，此时没有框没有输入文字，点击后默认的文字出现
+        this.value = '请输入';  //  这里的 this 代表 inputs
+      }
+      // 此时输入框输入的文字或者默认文字（请输入）变为默认灰色效果
+      this.style.color = '#999';
+    }
+  </script>
+</body>
+
+
+</html>

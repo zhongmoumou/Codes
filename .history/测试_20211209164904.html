@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .change {
+
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <button>切换</button>
+  <a href="http://www.baidu.com">百度</a>
+
+  <script>
+    // 1、获取事件源
+    let btn = document.querySelector('button');
+    let a = document.querySelector('a');
+
+    // 2、注册事件，添加事件处理程序
+    btn.onclick = function() {
+      // 把 a 的 href 属性换成 http://ife.baidu.com/
+      a.href = 'http://ife.baidu.com/';
+
+      // 把 a 的文字换成：百度IFE
+      a.innerText = '百度IFE';
+    }
+  </script>
+</body>
+
+
+</html>

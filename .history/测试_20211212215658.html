@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+  <script>
+    // 获取父节点：
+    let ul = document.querySelector('ul');
+
+    // 获取子节点——DOM：
+    let li1 = document.querySelector('li');
+
+    // 获取子节点——节点操作：
+    // 1、parentNode.childNodes（获取所有子节点）
+    let li2 = ul.childNodes;
+    console.log(li2);  // 输出：[text, li, text, li, text, li, text, li, text]
+
+    // 2、parentNode.firstChild（获取第一个子节点）
+    let lili1 = ul.firstChild; 
+    console.log(lili1);  // 输出：#text
+
+		// 3、parentNode.lastChild（获取最后一个子节点）
+		let lili2 = ul.lastChild; 
+    console.log(lili2);  // 输出：#text
+  </script>
+</body>
+
+
+</html>

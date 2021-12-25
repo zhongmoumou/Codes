@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 600px;
+      margin: 100px auto;
+    }
+    .message {
+      display: inline-block;
+      font-size: 12px;
+      color: #999;
+      padding-left: 20px;
+    }
+    .wrong {
+      color: red;
+    }
+
+    .right {
+      color: green;
+    }
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <div class="box">
+    <input type="password" class="input">
+    <p class="message">请输入 6~16 位密码</p>
+  </div>
+
+  <script>
+    // 1、获取事件源
+    let input = document.getElementById('.input');
+    let p = document.getElementById('.message');
+
+    // 2、注册事件，添加事件处理程序
+    input.onclick = function() {
+      
+    }
+  </script>
+</body>
+
+
+</html>

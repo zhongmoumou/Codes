@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <h1 id="btn1">点击此按钮，获取当前日期、时间</h1>
+  <h2 id="btn2">今天的日期是</h2>
+  <h3 id="btn3">今天的时期是</h3>
+
+  <script>
+  // 1、点击 h1 标签，获得当前的日期、时间
+    // 获取事件源：
+    let btn1 = document.querySelector('#btn1');
+    let btn2 = document.querySelector('#btn2')
+
+    //确定事件类型、完成事件处理程序：
+    btn1.onclick = function() {
+      btn2.innerText = getDate();
+    }
+
+  // 2、不点击，直接让 h3 标签显示当前日期
+    let btn3 = document.querySelector('btn3');
+
+    btn3.
+
+
+
+    // 该函数的作用是：返回当前日期（年/月/日/星期）
+    function getDate() {
+      let date = new Date();  // 获取当前中国标准时间
+
+      let year = date.getFullYear();  // 获取当前的年份
+      let month = date.getMonth() + 1;  // 获取当前的月份（加1是因为该方法从0-11，所以真实月份应该加1）
+      let dates = date.getDate();  // 获取当天日期
+
+      let week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+      let day = date.getDay();  // 获取星期几（周日0 到 周六6），配合上面的 week 就可以获得今日的星期（week[day]）
+
+      return '今天是：' + year + '年' + month + '月' + dates + '日 ' + week[day] + ' ' + getTime()
+    }
+
+    // 该函数的作用是：返回当前时间（几时几分几秒）
+    function getTime() {
+      let time = new Date();
+
+      let hour = time.getHours();
+      if (hour < 10) {
+        hour = '0' + hour;  // 当时小于10的时候，前面加个0
+      };
+      // 可以用三元表达式：hour = hour < 10 ? '0' + hour : hour;
+
+      let minutes = time.getMinutes();
+      if (minutes < 10) {
+        minutes = '0' + minutes;  // 当分小于10的时候，前面加个0
+      };
+      // 可以用三元表达式：minutes = minutes < 10 ? '0' + minutes : minutes;
+
+      let seconds = time.getSeconds();
+      if (seconds < 10) {
+        seconds = '0' + seconds;  // 当秒小于10的时候，前面加个0
+      };
+      // 可以用三元表达式：seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      return hour + ':' + minutes + ':' + seconds
+    }
+
+  </script>
+</body>
+</html>

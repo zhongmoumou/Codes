@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+  </ul>
+
+  <!-- FIXME:哪个混蛋写的垃圾代码，会崩溃的。 -->
+  <!-- TODO:  -->
+
+  <script>
+    // TODO:
+    // TODO：
+      // 1、获取元素
+      let ul = document.querySelector('ul');
+				let li = document.querySelectorAll('li');
+
+        // 2、复制 ul 第一个子节点
+        let lis = ul.children[0].cloneNode(true);
+				// 或者用这个：let lis = li[0].cloneNode(true);
+
+				// 3、把刚刚复制的子节点添加到 ul 的最后面
+				ul.appendChild(lis);
+  </script>
+</body>
+
+
+</html>

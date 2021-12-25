@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setTimeout()
+        // 1. window 可以省略不写
+        // 2. 延迟的毫秒数默认不写是0，如果写，必须是毫秒
+        // 3. 调用函数有三种形式：直接写函数、写函数名、'函数名()'。第三种不推荐使用
+        // 3.1 直接写函数
+        setTimeout(function() {
+            console.log('hello world1');  // 2秒后打印 hello world1
+        }, 2000);
+        
+        // 3.2 写函数名
+        setTimeout(hello, 3000);
+        function hello() {
+            console.log('hello world2');  // 3秒后打印 hello world2
+        }
+
+        // 3.3 '函数名()
+        // setTimeout('hello()', 4000);   // 不提倡这个写法
+
+        // 4. 如果有很多定时器，可以给定时器赋值一个标识符（命名）
+        let timer1 = setTimeout(callback1, 5000);
+        let timer2 = setTimeout(callback2, 6000);
+
+        function callback1() {
+            console.log('hello world3');  // 5秒后打印 hello world3
+        }
+
+        function callback2() {
+            console.log('hello world4');  // 6秒后打印 hello world4
+        }
+
+				// clearTimeout()
+				// 1. window 可以省略；
+        // 2. 里面的参数是定时器的标识符，即 ID 就是定时器的名字。
+        clearTimeout(timeour(timer1));  // 停止了名字为 timer1 的定时器，所以 hello world3 就不打印了
+    </script>
+</body>
+</html>

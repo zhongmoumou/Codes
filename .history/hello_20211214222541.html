@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <br>
+
+    <a href="http://www.baidu.com">百度</a>
+    <br>
+    <br>
+
+    <form action="http://www.baidu.com">
+        <input type="submit" name="sub" value="提交">
+    </form>
+
+    <script>
+        let a = document.querySelector('a');
+
+        // 1、传统注册事件：
+        a.onclick() = function(e) {
+            // (1)e.preventDefault()，该方法  阻止默认事件（默认行为，标准），比如不让链接跳转
+            e.preventDefault()；
+        }
+    </script>
+</body>
+</html>

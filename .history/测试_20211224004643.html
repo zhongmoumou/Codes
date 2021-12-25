@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        let box = document.querySelector('.box');
+
+        box.addEventListener('click', function(e) {
+            let left = e.pageX - box.offsetLeft;
+            let top = e.pageY - box.offsetTop;
+
+            box.innerHTML = '鼠标距离盒子左边的坐标是：' + left + '\n'+ '\n' + '鼠标距离盒子上边的坐标是' + top;
+
+            console.log(left);
+            console.log(top);
+        });
+    </script>
+</body>
+</html>

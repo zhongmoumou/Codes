@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <input type="text" value="请输入" style="color: #999;width: 230px;height: 30px;">
+
+  <script>
+    // 1、获取事件源
+    let inputs = document.querySelector('input');
+
+    // 2、注册事件、添加事件处理程序1（获得鼠标焦点触发）
+    inputs.onfocus = function() {
+      if (inputs.value === '请输入') {
+        // 当鼠标点击输入框且默认的文字存在时，点击后默认的文字消失
+        this.value = '';  //  这里的 this 代表 inputs
+
+        // 此时输入的文字又变成黑色
+        this.style.color = 'black';
+      }
+    }
+
+    // 3、注册事件、添加事件处理程序1（失去鼠标焦点触发）
+    inputs.onblur = function() {
+      if (inputs.value === '') {
+        // 当鼠标点击输入框外面且默认没有文字时，点击后默认的文字出现
+        this.value = '请输入';  //  这里的 this 代表 inputs
+
+        // 此时输入框有文字的话文字为黑色，如果没有的话则变为浅色默认文本
+        this.style.color = '#999';
+      }
+    }
+  </script>
+</body>
+
+
+</html>

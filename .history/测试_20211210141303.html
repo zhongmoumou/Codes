@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 800px;
+      margin: 100px auto;
+      text-align: center;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead {
+      height: 30px;
+      background-color: skyblue;
+    }
+
+    tbody tr {
+      height: 30px;
+    }  
+
+    tbody td {
+      border-bottom: 1px solid #d7d7d7;
+      font-size: 12px;
+      color: blue;
+    }
+
+    .bg {
+      background-color: pink;
+    }
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>代码</th>
+        <th>名称</th>
+        <th>最新公布净值</th>
+        <th>累计净值</th>
+        <th>前单位净值</th>
+        <th>净值增长率</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0/047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0/047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0/047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0/047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0/047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0/047%</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    // 1、获取事件源
+    let trs = document.querySelector('thead').querySelectorAll('tr');
+
+    // 2、注册事件，添加事件处理程序：利用 for 循环
+    // for (let i = 0; i < trs.length; i++) {
+    //   // 鼠标经过事件：onmouseover
+    //   trs[i].onmouseover = function() {
+    //     // 当鼠标经过的时候给 tr 标签添加一个 bg 类，设置好背景颜色，这样鼠标经过的时候就可以改变这一行的背景颜色了
+    //     this.className = 'bg';
+    //   }
+    //   // 鼠标离开事件：onmouseout
+    //   trs[i].onmouseout = function() {
+    //     // 当鼠标离开的时候给 tr 标签添加一个 空 类，这样鼠标经过的时候就这一行就没有背景颜色了
+    //     this.className = '';
+    //   }
+    // }
+
+    for (let i = 0; i < btns.length; i++) {
+      trs[i].onmouseover = function() {
+          // (1) 第一步先把所有的按钮背景颜色去掉（干掉其他人）
+          for (let i = 0; i < btns.length; i++) {
+              trs[i].style.backgroundColor = 'pink';
+          }
+          // (2) 第二步让当前的元素背景颜色为 pink（留下我自己）
+          this.style.backgroundColor = 'pink';
+      }
+    }
+  </script>
+</body>
+
+
+</html>

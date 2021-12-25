@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <br>
+
+    <a href="http://www.baidu.com">百度</a>
+    <br>
+    <br>
+
+    <form action="http://www.baidu.com">
+        <input type="submit" name="sub" value="提交">
+    </form>
+
+    <script>
+        let a = document.querySelector('a');
+
+        // 1、传统注册事件：
+        a.onclick = function(e) {
+            // (1) e.preventDefault()，该方法  阻止默认事件（默认行为，标准），比如不让链接跳转
+            e.preventDefault();
+
+            // (2) e.returnValue，该属性  阻止默认事件（默认行为，非标准，IE6~8使用），比如不让链接跳转
+            e.returnValue;
+
+            // (3) 直接使用 return false 也可以阻止事件发生，没有兼容性问题，但是后面的所有代码均不执行了
+            return false;
+            alert('你好');
+        }
+
+        // 2、方法监听注册事件：addEventListener()
+        
+    </script>
+</body>
+</html>

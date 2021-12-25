@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+        
+    li {
+        list-style-type: none;
+    }
+    
+    .tab {
+        width: 978px;
+        margin: 100px auto;
+    }
+    
+    .tab_list {
+        height: 39px;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+    
+    .tab_list li {
+        float: left;
+        height: 39px;
+        line-height: 39px;
+        padding: 0 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .tab_list .current {
+        background-color: #c81623;
+        color: #fff;
+    }
+    
+    .item_info {
+        padding: 20px 0 0 20px;
+    }
+    
+    .item {
+        display: none;
+    }
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <ol>
+    <li>hello world</li>
+  </ol>
+
+  <script>
+    // 1、创建元素 li，赋值给变量 lis
+    let lis = document.createElement('li');
+
+    // 2、在 ul 中添加 刚刚新增的 li 元素（创建在后面）
+    let ul = document.querySelector('ol');
+
+    ul.appendChild(lis);
+    
+  </script>
+</body>
+
+
+</html>

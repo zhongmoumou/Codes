@@ -1,0 +1,106 @@
+p {
+  /* 辅助框线样式，start */
+    width: 200px;
+    height: 50px;
+    border: 1px solid #a8a8a8;
+  /*   辅助框线样式，end */
+    text-align: center;
+  /*   设置行间距 */
+    line-height: 50px;
+  /*   字母间距 */
+    letter-spacing: 4px;
+  /*   单词间距 */
+    word-spacing: 20px;
+  /*   设置文字颜色 */
+    color: red;
+    font-size: 20px;
+  /*   无衬线字体，即笔画结尾是平滑的字体。 */
+    font-family: serif;
+  }
+  .ellipse {
+    width:100px;
+  /*   和 normal 一样，连续的空白符会被合并。但文本内的换行无效。 */
+    white-space: nowrap;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .trans {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+  /*   X轴偏移量、Y轴偏移量、模糊半径、扩散半径和颜色。 */
+    box-shadow: 10px 10px 5px #888888;
+  }
+  
+  .trans:hover {
+    width: 300px;
+  }
+  
+  .rotate {
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    transform: rotate(7deg);
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+  
+    border: 5px solid green;
+    border-bottom: 3px dotted #ff0000;
+  
+    border: 5px solid green;
+    border-radius: 10px;
+  
+    border: 5px solid green;
+  
+    padding: 25px;
+    padding: 30px 50px;
+    padding: 10px 20px 30px 50px;
+  
+    margin: 25px;
+    margin: 30px 50px;
+    margin: 10px 20px 30px 50px;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+    border-radius: 50%;
+  }
+  
+  ul {
+    /* 设置列表元素的 marker */
+      list-style-type: none;
+      display:flex;
+  }
+  li a {
+    /* 用于设置文本的修饰线外观的 */
+      text-decoration: none;
+      margin: 10px;
+  }
+  
+  .loading {   
+    width: 35px;
+    height: 35px;
+    border: 5px solid rgba(189,189,189 ,0.25);
+    border-left-color: rgba(3,155,229 ,1);  
+    border-top-color: rgba(3,155,229 ,1);
+    border-radius: 50%;
+    animation: rotate 500ms infinite linear;
+    
+  }
+  /* 通过在动画序列中定义关键帧的样式来控制CSS动画序列中的中间步骤 */
+  @keyframes rotate {
+    from {
+      transform: rotate(0)
+    }
+    to {
+      transform: rotate(1turn) 
+    }
+  }

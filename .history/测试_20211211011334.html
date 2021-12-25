@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+        
+    li {
+        list-style-type: none;
+    }
+    
+    .tab {
+        width: 978px;
+        margin: 100px auto;
+    }
+    
+    .tab_list {
+        height: 39px;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+    
+    .tab_list li {
+        float: left;
+        height: 39px;
+        line-height: 39px;
+        padding: 0 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .tab_list .current {
+        background-color: #c81623;
+        color: #fff;
+    }
+    
+    .item_info {
+        padding: 20px 0 0 20px;
+    }
+    
+    .item {
+        display: none;
+    }
+</style>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <ol>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ol>
+
+  <script>
+    // 获取父节点：
+    let ul = document.querySelector('ul');
+
+    // 获取子节点——DOM：
+    let li = document.querySelector('li');
+
+    // 获取子节点——节点操作：
+    let box2 = hello.parentNode;
+    console.log(box);  // 输出的是 box 这个 div，而不是 main
+  </script>
+</body>
+
+
+</html>

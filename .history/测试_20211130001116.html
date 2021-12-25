@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="测试.js"></script>
+</head>
+<body>
+  <script>
+
+var num = 10;
+
+console.log(num);  // 输出：10。因为这里的 num 是全局变量
+
+function fn() {  // 外部函数
+	var num = 20;
+
+	function fns() {  // 内部函数
+		console.log(num);
+	}
+
+	fns();  // 输出：20。因为根据内部函数可以访问外部函数的变量这种机制，采用链式查找可以在外部函数中找到变量 num = 20
+}
+
+// fn();  // 输出：20  20。因为这里的 num 
+
+  </script>
+</body>
+</html>
